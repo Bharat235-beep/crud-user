@@ -5,14 +5,14 @@ const UserState = (props) => {
     const ui=[]
     const [users,setUsers]=useState(ui)
     const getusers=()=>{
-        axios.get('http://localhost:3001').then((users=>{
+        axios.get('https://crud-user-seven.vercel.app/').then((users=>{
           console.log(users.data)
           setUsers(users.data)
       }))
       .catch(err=>console.log(err))
       }
       const createuser=(name,email,age)=>{
-        axios.post('http://localhost:3001/create/',{name:name,email:email,age:age})
+        axios.post('https://crud-user-seven.vercel.app/create/',{name:name,email:email,age:age})
         .then((result)=>{
           
           setUsers(users.concat(result.data))
@@ -21,7 +21,7 @@ const UserState = (props) => {
       .catch(err=>console.log(err))
       }
       const deleteuser=(id)=>{
-        axios.delete('http://localhost:3001/delete/'+id)
+        axios.delete('https://crud-user-seven.vercel.app/delete/'+id)
         .then((result)=>{
             console.log(result)
             // console.time()
@@ -35,7 +35,7 @@ const UserState = (props) => {
       }
       const userdata=(id,name,email,age)=>{
         
-        axios.put('http://localhost:3001/update/'+id,{name,email,age})
+        axios.put('https://crud-user-seven.vercel.app/'+id,{name,email,age})
         .then((result) => {
           console.log(result.data);
           getusers();
