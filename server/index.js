@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose=require('mongoose');
 const user = require('./models/user');
 const cors=require('cors')
-mongoose.connect('mongodb://localhost:27017/crud-user').then(()=>{
+mongoose.connect('mongodb+srv://rajkumar45burail:bharat%402003@cluster0.m74pjfv.mongodb.net/test').then(()=>{
     console.log("Connection successfull")
 })
 const app=express();
