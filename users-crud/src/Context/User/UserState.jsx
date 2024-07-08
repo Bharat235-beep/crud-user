@@ -35,7 +35,7 @@ const UserState = (props) => {
       }
       const userdata=(id,name,email,age)=>{
         
-        axios.put('https://crud-user-seven.vercel.app/'+id,{name,email,age})
+        axios.put('https://crud-user-seven.vercel.app/update/'+id,{name,email,age})
         .then((result) => {
           console.log(result.data);
           getusers();
