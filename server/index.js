@@ -8,7 +8,7 @@ mongoose.connect('mongodb+srv://rajkumar45burail:bharat%402003@cluster0.m74pjfv.
 const app=express();
 app.use(express.json())
 app.use(cors({
-    origin:["https://crud-user-frontend.vercel.app/"],
+    origin:["https://crud-user-frontend.vercel.app"],
     methods:["POST","GET","PUT","DELETE"],
      credentials:true
 }));
